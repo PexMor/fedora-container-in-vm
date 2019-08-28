@@ -2,6 +2,8 @@
 
 This repo is to demonstrate how to run buildah, podman and skopeo in portable VM
 
+see directory [all-in-one](All in One Vagrant for container tools)
+
 ```bash
 # jump inside vagrant
 vagrant ssh
@@ -19,7 +21,11 @@ yum install policycoreutils-python-utils -y
 
 # then install the container tools
 yum install podman buildah skopeo -y
+```
 
+Debugging the SE linux
+
+```bash
 # disable at runtime
 setenforce 0
 
