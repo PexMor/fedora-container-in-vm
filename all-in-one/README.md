@@ -14,6 +14,6 @@ vagrant ssh
 
 then feel free to run
 
-[https://docs.fedoraproject.org/en-US/iot/buildah/](Buildah test run)
+[Buildah test run](https://docs.fedoraproject.org/en-US/iot/buildah/)
 
-or refer to  [..](Main README.md)
+or refer to  [Main README.md](..)

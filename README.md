@@ -2,7 +2,8 @@
 
 This repo is to demonstrate how to run buildah, podman and skopeo in portable VM
 
-see directory (all-in-one)[All in One Vagrant for container tools]
+see directory
+[All in One Vagrant for container tools](all-in-one)
 
 ```bash
 # jump inside vagrant
