@@ -3,6 +3,11 @@
 This repo is to demonstrate how to run buildah, podman and skopeo in portable VM
 
 ```bash
+# jump inside vagrant
+vagrant ssh
+```
+
+```bash
 # start with updating the system
 yum update -y
 
