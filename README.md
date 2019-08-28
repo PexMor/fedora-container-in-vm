@@ -6,6 +6,9 @@ This repo is to demonstrate how to run buildah, podman and skopeo in portable VM
 # start with updating the system
 yum update -y
 
+# install semanage
+yum install policycoreutils-python-utils -y
+
 # then install the container tools
 yum install podman buildah skopeo -y
 
