@@ -16,4 +16,4 @@ then feel free to run
 
 [Buildah test run](https://docs.fedoraproject.org/en-US/iot/buildah/)
 
-or refer to  [Main README.md](..)
+or refer to  [Main README.md](../README.md)
