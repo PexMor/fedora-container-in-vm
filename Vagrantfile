@@ -1,5 +1,7 @@
 load File.expand_path("localconf") if File.exists?("localconf")
 
+load File.expand_path("kvmconf") if File.exists?("kvmconf")
+
 Vagrant.configure("2") do |config|
   config.vm.box = "fedora/30-cloud-base"
   config.vm.define 'f30'

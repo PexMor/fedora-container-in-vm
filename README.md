@@ -8,6 +8,9 @@ vagrant ssh
 ```
 
 ```bash
+# switch to root account
+sudo -i
+
 # start with updating the system
 yum update -y
 
