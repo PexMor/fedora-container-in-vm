@@ -27,3 +27,19 @@ sed -i 's/^\s*SELINUX=.*/SELINUX=permissive/g' /etc/selinux/config
 # check state
 sestatus
 ```
+
+## Test
+
+```bash
+buildah from fedora
+buildah run fedora-working-container dnf install httpd -y
+
+# here it fails even with selinux disabled
+
+echo "<html />" >index.html
+buildah copy fedora-working-container index.html /var/www/html/index.html
+buildah config --entrypoint "/usr/sbin/httpd -DFOREGROUND" fedora-working-container
+buildah commit fedora-working-container fedora-myhttpd
+buildah images
+podman run fedora-myhttpd
+```
