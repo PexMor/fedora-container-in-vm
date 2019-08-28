@@ -41,9 +41,6 @@ sestatus
 ```bash
 buildah from fedora
 buildah run fedora-working-container dnf install httpd -y
-
-# here it fails even with selinux disabled
-
 echo "<html />" >index.html
 buildah copy fedora-working-container index.html /var/www/html/index.html
 buildah config --entrypoint "/usr/sbin/httpd -DFOREGROUND" fedora-working-container
