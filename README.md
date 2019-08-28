@@ -43,7 +43,9 @@ sed -i 's/^\s*SELINUX=.*/SELINUX=permissive/g' /etc/selinux/config
 sestatus
 ```
 
-## Test
+## Buildah Test
+
+extracted from [https://docs.fedoraproject.org/en-US/iot/buildah/](https://docs.fedoraproject.org/en-US/iot/buildah/)
 
 ```bash
 buildah from fedora
