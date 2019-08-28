@@ -21,7 +21,7 @@ yum install policycoreutils-python-utils -y
 yum install podman buildah skopeo -y
 
 # disable at runtime
-sudo selinux 0
+setenforce 0
 
 # fix the context
 semanage fcontext -a -t container_file_t /var/lib/containers\(/.*\)\?
