@@ -2,7 +2,7 @@
 
 This repo is to demonstrate how to run buildah, podman and skopeo in portable VM
 
-__TL;DR:__ use the ```Vagrantfile``` in directory [all-in-one-nfs](all-in-one-nfs/README.md)
+__TL;DR:__ use the ```Vagrantfile``` in directory [all-in-one-nfs](all-in-one-nfs)
 
 In case you __do not have__ ```vagrant``` but ```virsh``` just jump into [usingVirsh](usingVirsh).
 
