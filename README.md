@@ -10,7 +10,7 @@ vagrant up
 vagrant ssh
 ```
 
-__Note:__ It is __crucial__ to have at least __1 GB__ of RAM allocated for the VM. Otherwise you might encounter strange behaviour caused by __OOM kill__.
+__Note:__ It is __crucial__ to have at least __1 GB__ of RAM allocated for the VM. Otherwise, you might encounter strange behaviour caused by __OOM kill__.
 
 ## All-in-One Vagrant setup
 
@@ -36,9 +36,9 @@ podman run fedora-myhttpd
 
 #### Step by step explained
 
-1. ```buildah from fedora``` creates __fedora-working-container__ (the actuall name is shown in CLI)
+1. ```buildah from fedora``` creates __fedora-working-container__ (the actual name is shown in CLI)
 2. ```buildah run fedora-working-container dnf install httpd -y``` simple install, note the familiar ```dnf install httpd -y``` (forced install of __httpd__ aka __apache 2.4__).
-3. ```echo "<html />" >index.html``` make the simplest html page.
+3. ```echo "<html />" >index.html``` make the simplest HTML page.
 4. ```buildah copy fedora-working-container index.html /var/www/html/index.html``` put created __index.html__ into proper place inside the container.
 5. ```buildah commit fedora-working-container fedora-myhttpd``` bake the container into permanent image (per user though)
 6. ```buildah images``` list the images available (you should see __fedora-httpd__ listed among them).
@@ -50,13 +50,13 @@ Some details that you might find useful when doing experiments with this repo an
 
 ### Alternative Virsh
 
-In case you __do not have__ ```vagrant```, but only the ```virsh``` go to sub-directory [usingVirsh](usingVirsh). This contains few scripts that can help you to achieve the same but using __virsh__ (libvirt-bin package on Ubuntu).
+In case you __do not have__ ```vagrant```, but only the ```virsh``` go to sub-directory [usingVirsh](usingVirsh). This directory contains few scripts that can help you to achieve the same but using __virsh__ (libvirt-bin package on Ubuntu).
 
 ### Provisioning the VM
 
 The few commands that you have to run as root ```sudo -i``` to get it working when you have vanilla __Fedora__ running somewhere. In the ```Vagrantfile``` the packages are squashed into one line.
 
-__Note:__ _If you do not need the nfs then leave out the ```nfs-tools``` package and ```rpcbind``` service start and enable._
+__Note:__ _If you do not need the NFS, then leave out the ```nfs-tools``` package and ```rpcbind``` service start and enable._
 
 ```bash
 # switch to root account
@@ -71,7 +71,7 @@ yum install policycoreutils-python-utils -y
 # then install the container tools
 yum install podman buildah skopeo -y
 
-# also install the nfs client
+# also install the NFS client
 yum install nfs-tools -y
 
 # turn on rpcbind
