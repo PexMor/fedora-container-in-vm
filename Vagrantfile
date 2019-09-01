@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   # config.vm.synced_folder ".", "/vagrant", type: "nfs"
   config.vm.provision 'shell', inline: <<-EOS
     yum update -y
-    # install semanage
+    # install all the packages
     yum install policycoreutils-python-utils nfs-utils podman buildah skopeo -y
     # turn on rpcbind
     systemctl start rpcbind
